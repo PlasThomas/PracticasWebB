@@ -1,0 +1,23 @@
+body{
+    background-image: url('../MEDIA/IMAG/backgr.jpg');
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    background-size: cover;
+}
+.titulos{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    font-size: 2em;
+    color: #e6dac6;
+}
+.menu{
+    margin-left: 10%;
+    margin-right: 70;
+}
+.parrafo{
+    width: 100%;
+    
+}
