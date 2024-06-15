@@ -1,0 +1,129 @@
+/*
+        pseudoclases
+mas comunes
+hover: evento cuando el cursor esta encima 
+link/visited: modifica la aparicnia de los links visitados y de los no vositaos
+.caja1{
+    height: 200px;
+    width: 200px;
+    background: slateblue;
+    transition: all 0.5s , border 0.8s;
+    border: 4px solid blue
+}
+.caja1:hover{
+    background: darkslateblue;
+    border: 6px solid red;
+    height: 400px;
+    width: 400px;
+}
+a:link{
+    color: red;   
+}
+a:visited{
+    color: aqua;
+} tienen mas prioridad que los colores de que se le asignen a solo los elementos
+
+active: al dejar activado un boton se cambian los estilos 
+focus: 
+.caja1{
+    height: 100px;
+    width: 100px;
+    background: violet;
+    margin: 25px;
+    transition: all 0.5s;
+    display: inline-block;
+}
+.caja1:active{
+    background: salmon;
+    width: 200px;
+    height: 200px;
+}
+.caja1:focus{
+    background: chartreuse;
+    width: 150px;
+    height: 150px;
+}
+
+lang: camia lo que corresponda a cierto idioma
+
+.caja1 b:lang(en){
+    background: black;
+    padding: 10px;
+}
+
+transition cambia la velocidad con la que cambian las cosas
+
+*/
+/*
+    object-fit
+se modifica las resoluciones, etc.
+contain: que se ajuste la resolucion se ajuste al contenido
+cover: cubre el contenedor
+none: hace lo que se le hincha pone resoluciones originales
+scale-down: el valor mas bajo entre contain y none.
+.caja img{
+    width: 100%;
+    height: 100%;
+    border: 4px solid red;
+    object-fit: scale-down;
+    object-position: -1em;
+}
+propuedad cursor
+.caja{
+    width: 300px;
+    height: 200px;
+    margin: 100px;
+    border: 4px solid red;
+    background: coral;
+    cursor: wait;
+}
+
+    colores css
+hsl-------- tarea
+hexadecimal con tres colores, cuatro opacidad, seis colores, ocho opacidad
+
+.caja{
+    width: 300px;
+    height: 200px;
+    margin: 100px;
+    border: 4px solid red;
+    background-color: #f00;
+    cursor: grab;
+}
+.caja:active{
+    cursor: grabbing;
+    background-color: #e4b;
+}
+
+*
+    responsive disigne
+que se adapte a diferentes resoluciones variadas 
+se trabaja media quiery
+    - mobile first
+que el entorno original sea el telefono y posteriormente el 
+*/
+
+*/
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+div{
+    width: 45%;
+    display: inline-block;
+    padding: 20px;
+    background: #d0a;
+}
+h1{
+    font-size: 2em;
+}
+.caja2{
+    background: #c09;
+}
+@media only screen and (max-widht: 1000px){
+    div{
+        display: block;
+        width: 100%;
+    }
+}

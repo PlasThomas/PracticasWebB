@@ -1,0 +1,111 @@
+/*
+    position
+    dom es el dominio de cada elemento 
+    entre top left son mas importantes entre las propiedades, por encima de right y bottom
+zindex: es una representacion de los elementos en el eje z, en el que cada uno se organiza por delante o por detros de otro
+suele tener un conflicto entre padres e hijos 
+static: no se considera posicionado
+absolute: la posicion es absoluta  diferencias entre relative es que el espacio reservado deja de ser reservado 
+y esta determinado por el propio elemento y el punto de referencia es el contenedor, depende de como esté definido
+relative: el dom se mantiene independientemente de como se mueva el elemneto 
+fixed: igual a absolute, pero queda fijado en algun lugar u no baja en el scroll , queda fijo
+sticky:  mezcla entre relative y fixed, se comporta como un fixed apartir de un punto en especifico y no antes
+
+div{
+    width: 120px;
+    height: 120px;
+    background-color: yellow;
+    display: block;
+}
+.caja1{
+    background-color: orange;
+    top: 20px;
+
+}
+.caja2{
+    background-color: green;
+    position: relative;
+    top: 60px;
+    left: 20px;
+    
+}
+.caja3{
+    background-color: lightblue;
+    position: relative;
+    z-index: 10;
+}
+para posiionar a un hijo por debajo del padre
+.contenedor{
+    width: 300px;
+    height: 300px;
+    background-color: blue;
+    margin: 40px;
+    position: relative;
+}
+.hijo{
+    background-color: orange;
+    width: 120px;
+    height: 120px;
+    top: -20px;
+    left: -20px;
+    position: relative;
+    z-index: -1;
+}
+opaciti es la transparencia
+
+div{
+    position: absolute;
+    background-color: yellow;
+    display: block;
+}
+div div{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+}
+.contenedor{
+    margin: 50px auto;
+    position: relative;
+    width: 600px;
+    height: 600px;
+    border: 4px solid red;
+    background-color: green;
+}
+.caja1{
+    right:  0;
+    bottom: 0;
+    outline: 5px solid blue;
+}
+.caja2{
+    outline: 5px solid orangered;
+    right: 0;
+}
+.caja3{
+    outline: 5px solid red;
+    top: 0;
+}
+.caja4{
+    outline: 5px solid violet;
+    bottom: 0;
+}
+/*centrar totalmente den un contenedor 
+.caja5{
+    outline: 4px solid gold;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+*/
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+.caja-fix{
+    background-color: orange;
+    position: sticky;
+    top :-50px;
+    opacity: 0.7;
+}

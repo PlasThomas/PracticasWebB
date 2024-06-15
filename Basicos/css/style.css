@@ -1,0 +1,139 @@
+/*
+            estructura de css
+selector: elementos que se modificaran.
+    tipos:
+        universal: afecta a fotos los elementos
+            *{} - afecta a todos los elementos
+        De tipo: selecciona los elementos de un tipo en especifico (debe tener el nombre de una etiqueta)
+            h1{} - afecta a todos los h1
+        clases: se realiza mediante clases de definidas para modificar a los elementos de es misma clase
+            .clase{}
+        ID: se modifica el elemento que tenga un mismo ID (deben ser unicos)
+            #id_objeto{}
+        Por atributo: se debe de crear un atributo en la etiqueta y posteriormente modificarla
+            [Atributo = 'algo']{}
+        Descendiente: se tiene que identificar los contenedores del elemento que se quiere modificar se puede hacer
+        con clases, etc
+            Etiqueta_superior Etiqueta inferior{}
+        Pseudo-clases: active hober, hay multiples tipos (investigar _________tarea__________)
+            elemento:hover{} (se modifica cuando lo toca el cursor)
+propiedad: tamaño, color, posicion, etc. 
+valor: el como se quere modificar la propiedad
+ejemplo
+selector{
+    proppiedad = valor;
+}
+            Especifidad
+cascade style sheet
+la ultima definicion de una propiedad sera la maxima propiedad cuando se ejecute la cascada en cada nivel de jerarquia
+jerarquia en css:
+de - a +
+pseudo-elementos
+elementos
+
+atributos
+pseudoclases
+clases
+
+identificadores
+
+estilos en linea
+
+!important
+
+como se usa el !important?
+selector{
+    propiedad = valor !important (Esto se posiciona por encima de todo)
+}
+            unidades de medida en css
+tipografia px pixeles , pixeles
+relativas: rem tiene como referencia el root de la pagina y em por defecto son 16px (cada em y se puede modificar dependiendo del navegador y se
+puede modificar con el font-size y se hereda de la caja contenedora) 
+vw y vh en valor de 100 son las medidas de la pantalla completa
+fijas: se pueden usar pt puntos pixeles cm o milimetros
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.contact-form{
+    font-size: 25px;
+    width: 50vw;
+    height: 20vh;
+}
+/*line height es el tamaño que ocupa la letra desde su eje horizontal y determina la sepatacion con los demas renglones
+font wheght depende de la funte, pues es que tan gruesa sea y algunas fuentes solo tiene dos anchuras 
+stretch y variant utilidad tarea()
+se pueden exportar fuentes desde google fonts expertando el css en html y luego pidiendola en el archivo css que se usará
+
+.contact-form__h2{
+    font-size: 2em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2;
+    font-weight: normal;
+    font-stretch: normal;
+    font-variant: small-caps;
+}
+        normalize css
+se usa para reiniciar los estilos en css
+se tiene que descargar y posteriormente anexar al archivo html
+h2{
+    display:block /inline;
+}
+tambien hay mezcla de ambos donde se comporta como uno y tiene las propiedades de otro
+
+        teoria de cajas
+en linea: ocupa un espaacio determinado, un ejemplo es una etiqueta b o p
+en bloque: se ajusta siempre al ancho del contenedor ejemplo es todas las etiquetas h
+
+la propiedad diplay modifica el comporamiento del elemento a linea o a bloque
+
+        teoria de caja
+padding: distancia entre los bordes del contenedor y el elemento
+    4 left, 2 right, 1 top, 3 buttom tienen un orden para ponerse en el comando padding y simplificar la sentencia
+    shorthard propierti se puede acortar 
+*/
+h2{
+    background-color: #a22;
+    display: inline-block;
+    /*padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    puede ser sustituido por:
+    padding: 10px 30px 10px 5px;
+    */
+    padding: 100px;
+    height: 100px;
+    width: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    /*
+    margin es la distancia que separa de otras cajas
+    funciona con las mismas reglas que padding*/
+    margin: 10px;
+    
+    /*dorder radios redondea bordes
+    la otra setencia establece el tamaño el tipo de borde y el color del borde
+    */
+    border-radius: 2em;
+    border: 8px ridge blue;
+    box-shadow: 10px 30px 10px 10px #000;
+    text-shadow: 2px 2px 7px #fff;
+    transform: rotate(2deg);
+}
+/*
+    box model
+es como se trabajan las cajas de la pagina 
+content: se modifica con el line-height
+padding: se modifica con el padding
+border: se modifica con el border
+margin: se modifica con el margin
+se acomodan en esa misma jerarquia 
+
+    outline 
+no afecta al DOM, solo resalta
+
+/**/
+

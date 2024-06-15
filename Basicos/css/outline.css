@@ -1,0 +1,88 @@
+/*.caja1,.caja2{
+    width: 100ox;
+    height: 100px;
+}
+para dar propidedades a varias entidades o clases
+el margin auto centra los elemntos que son bloques y que no estan posicionados
+content box establece el tamaño para que el borde quede pro fuera
+ourline no modifica el tamaño lo hace superficialmente como el borde que sale cuando se puede clikear en un elemento 
+.caja1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: auto;
+    outline: 10px solid blue;
+    box-sizing: content-box;
+}
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+div{
+    width: 200px;
+    height: 200px;
+    background-color: yellow;
+    display: inline-block;
+}
+.caja3{
+    border: 10px solid red;
+    position: relative;
+}
+        pseudo-elemento
+todos tienen dos punto antes de declararse y no funcionan inline
+first-line: afecta a la primera linea y solo afecta elementos de block
+first-letter: afecta a la primera letra y solo afecta elementos de block
+.texto{
+    padding: 20px;
+}
+.texto::first-letter{
+    color: blue;
+    font-size: 2em;
+}
+placeholder: lo que se mantiene dentro del input cuando esta vacio
+selection: la seleccion de texto o elementos en la pagina
+input{
+    width: 100%;
+    padding: 10px;
+}
+input::placeholder{
+    color: red;
+}
+input::selection{
+    color: aqua;
+    background: #555;
+}
+form{
+    margin: 100px auto;
+    display: block;
+    background-color: #555;
+    padding: 100px;
+    width: 50%;
+}
+
+
+after: son hijos del elemento al que se aplica y son inline
+before: 
+
+
+*/
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+b{
+    padding: 6px;
+    width: 100%;
+}
+b::before{
+    content: "me sssopotaniam";
+    color: coral;
+}
+b::after{
+    content: "tdosloses";
+    color: cadetblue;
+}
